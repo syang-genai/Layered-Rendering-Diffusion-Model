@@ -17,7 +17,7 @@ def main(args):
     clip_model = CLIPModel.from_pretrained(model_path_clip, torch_dtype=torch.float16)
     clip = clip_model.text_model
     #load diffusion model
-    auth_token = "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"
+    auth_token = "xxx"
     model_path_diffusion = "CompVis/stable-diffusion-v1-4"
     unet = UNet2DConditionModel.from_pretrained(model_path_diffusion, subfolder="unet", use_auth_token=auth_token, revision="fp16", torch_dtype=torch.float16)
     #load vae model 
